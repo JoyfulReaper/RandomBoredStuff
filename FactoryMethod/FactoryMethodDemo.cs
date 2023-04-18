@@ -6,7 +6,10 @@ public class FactoryMethodDemo : IDemoApp
 {
     public Task ExecuteAsync()
     {
-        throw new NotImplementedException();
+        Console.WriteLine(new AppleCreator().GetDescription());
+        Console.WriteLine(new KeyboardCreator().GetDescription());
+
+        return Task.CompletedTask;
     }
 
     public string GetMenuEntry()

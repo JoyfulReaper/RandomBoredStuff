@@ -2,7 +2,7 @@
 
 public abstract class PublisherBase : IPublisher
 {
-    private List<ISubscriber> _subscribers = new();
+    private readonly List<ISubscriber> _subscribers = new();
 
     public void AddSubscriber(ISubscriber subscriber)
     {
