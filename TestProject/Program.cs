@@ -3,15 +3,26 @@ using System.Reflection;
 
 var assemblies = ScanAssemblies();
 var demos = LoadDemos(assemblies);
-ShowMenu(demos);
-var selection = GetMenuSelection();
-await ExecuteDemo(demos, selection);
+
+bool first = true;
+while (true)
+{
+    if(!first)
+        Console.WriteLine();
+
+    first = false;
+
+    ShowMenu(demos);
+    var selection = GetMenuSelection();
+    await ExecuteDemo(demos, selection);
+}
 
 static List<Assembly> ScanAssemblies()
 {
     var output = new List<Assembly>
     {
-        Assembly.GetAssembly(typeof(Observer.Discovery)) ?? throw new Exception("Assembly unexpectedly null.")
+        Assembly.GetAssembly(typeof(Observer.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
+        Assembly.GetAssembly(typeof(FactoryMethod.Discovery)) ?? throw new Exception("Assembly unexpectedly null.")
     };
 
     return output;
@@ -54,6 +65,10 @@ static int GetMenuSelection()
         throw new Exception("Input was unexpectedly null.");
 
     var selection = int.Parse(input);
+    if(selection == 0)
+    {
+        Environment.Exit(0);
+    }
 
     return selection;
 }
