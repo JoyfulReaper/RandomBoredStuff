@@ -22,7 +22,8 @@ static List<Assembly> ScanAssemblies()
     var output = new List<Assembly>
     {
         Assembly.GetAssembly(typeof(Observer.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
-        Assembly.GetAssembly(typeof(FactoryMethod.Discovery)) ?? throw new Exception("Assembly unexpectedly null.")
+        Assembly.GetAssembly(typeof(FactoryMethod.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
+        Assembly.GetAssembly(typeof(AbstractFactory.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
     };
 
     return output;
@@ -50,6 +51,7 @@ static Dictionary<int, IDemoApp> LoadDemos(List<Assembly> assemblies)
 static void ShowMenu(Dictionary<int, IDemoApp> demos)
 {
     Console.WriteLine("Demo Menu (zero to quit): ");
+    Console.WriteLine("0. Quit");
     foreach (var demo in demos)
     {
         Console.WriteLine($"{demo.Key}. {demo.Value.GetMenuEntry()}");
