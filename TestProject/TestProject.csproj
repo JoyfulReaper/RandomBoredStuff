@@ -14,6 +14,7 @@
     <ProjectReference Include="..\Observer\Observer.csproj" />
     <ProjectReference Include="..\Prototype\Prototype.csproj" />
     <ProjectReference Include="..\Shared\Shared.csproj" />
+    <ProjectReference Include="..\Singleton\Singleton.csproj" />
   </ItemGroup>
 
 </Project>
