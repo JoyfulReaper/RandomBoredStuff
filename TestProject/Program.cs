@@ -27,6 +27,7 @@ static List<Assembly> ScanAssemblies()
         Assembly.GetAssembly(typeof(Builder.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
         Assembly.GetAssembly(typeof(Prototype.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
         Assembly.GetAssembly(typeof(Singleton.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
+        Assembly.GetAssembly(typeof(Adapter.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
     };
 
     return output;
