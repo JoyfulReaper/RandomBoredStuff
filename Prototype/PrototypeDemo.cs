@@ -1,5 +1,6 @@
 ﻿//https://dev.to/kalkwst/prototype-pattern-in-c-2fnh
 //https://refactoring.guru/design-patterns/prototype
+//TODO: Prototype registry demo
 using Shared;
 
 namespace Prototype;
