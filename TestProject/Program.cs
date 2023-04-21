@@ -32,6 +32,7 @@ static List<Assembly> ScanAssemblies()
         Assembly.GetAssembly(typeof(Composite.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
         Assembly.GetAssembly(typeof(Decorator.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
         Assembly.GetAssembly(typeof(Facade.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
+        Assembly.GetAssembly(typeof(Flyweight.Discovery)) ?? throw new Exception("Assembly unexpectedly null."),
     };
 
     return output;
