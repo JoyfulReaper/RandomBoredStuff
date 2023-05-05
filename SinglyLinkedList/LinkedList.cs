@@ -24,4 +24,39 @@ public class LinkedList<T>
             previousNode.Next = currentNode;
         }
     }
+
+    public void Clear()
+    {
+        Head = null;
+    }
+
+    public bool Contains(object? value)
+    {
+        var currentNode = Head;
+        while (currentNode != null)
+        {
+            if (currentNode.Value?.Equals(value) ?? false)
+            {
+                return true;
+            }
+            currentNode = currentNode.Next;
+        }
+        return false;
+    }
+
+    public int IndexOf(object? value)
+    {
+        var currentNode = Head;
+        var index = 0;
+        while (currentNode != null)
+        {
+            if (currentNode.Value?.Equals(value) ?? false)
+            {
+                return index;
+            }
+            currentNode = currentNode.Next;
+            index++;
+        }
+        return -1;
+    }
 }

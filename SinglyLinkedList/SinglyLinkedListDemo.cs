@@ -10,6 +10,12 @@ public class SinglyLinkedListDemo : IDemoApp
         linkedList.Add(1);
         linkedList.Add(2);
 
+        Console.WriteLine("Does list contain 3? " + linkedList.Contains(3));
+        linkedList.Add(3);
+        Console.WriteLine("Does list contain 3? " + linkedList.Contains(3));
+
+        Console.WriteLine("Index of 2? " + linkedList.IndexOf(2));
+
         DisplayLinkedList(linkedList);
 
         return Task.CompletedTask;
