@@ -49,6 +49,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecordAndDiscriminatedUnion
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PatternMatching", "PatternMatching\PatternMatching.fsproj", "{9851B5B3-7D56-4C9B-A6D8-58602805440A}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Options", "Options\Options.fsproj", "{5E5C773F-7F05-4794-9FFA-D10BEC7B2FE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +145,10 @@ Global
 		{9851B5B3-7D56-4C9B-A6D8-58602805440A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9851B5B3-7D56-4C9B-A6D8-58602805440A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9851B5B3-7D56-4C9B-A6D8-58602805440A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E5C773F-7F05-4794-9FFA-D10BEC7B2FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5C773F-7F05-4794-9FFA-D10BEC7B2FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E5C773F-7F05-4794-9FFA-D10BEC7B2FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E5C773F-7F05-4794-9FFA-D10BEC7B2FE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -155,6 +161,7 @@ Global
 		{7BE3EFF9-99C3-4E5E-A5A7-D674CAC36AA3} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
 		{EB4C675C-3F8A-4697-9300-AB4FF36BD170} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
 		{9851B5B3-7D56-4C9B-A6D8-58602805440A} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
+		{5E5C773F-7F05-4794-9FFA-D10BEC7B2FE8} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50199764-00F9-4953-B351-2C1FC91E3A58}

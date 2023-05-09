@@ -89,3 +89,23 @@ module PatternMaching =
         | Some num -> printfn($"You picked {num}")
         | None -> printfn($"That's not a number!")
 
+    /////////////// Active Patterns ///////////////
+
+    let (|Numba|_|) = parseInt // |Name|_|
+    let (|Double|_|) = parseDouble
+    let (|Date|_|) = parseDatetimeOffset
+    let (|TimeSpan|_|) = parseTimeSpan
+
+    let printParseResult = function
+        | Numba x -> printfn $"%d{x}"
+        | Double x -> printfn $"%f{x}"
+        | Date x -> printfn $"%O{x}"
+        | TimeSpan x -> printfn $"%O{x}"
+        | _ -> printfn $"Nothing was parse-able!"
+
+    // Call the printer with some different values to parse.
+    printParseResult "12"
+    printParseResult "12.045"
+    printParseResult "12/28/2016"
+    printParseResult "9:01PM"
+    printParseResult "banana!"
