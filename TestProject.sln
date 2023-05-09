@@ -45,6 +45,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sequences", "Sequences\Sequ
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Recursion", "Recursion\Recursion.fsproj", "{7BE3EFF9-99C3-4E5E-A5A7-D674CAC36AA3}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecordAndDiscriminatedUnionTypes", "RecordAndDiscriminatedUnionTypes\RecordAndDiscriminatedUnionTypes.fsproj", "{EB4C675C-3F8A-4697-9300-AB4FF36BD170}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,10 @@ Global
 		{7BE3EFF9-99C3-4E5E-A5A7-D674CAC36AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BE3EFF9-99C3-4E5E-A5A7-D674CAC36AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE3EFF9-99C3-4E5E-A5A7-D674CAC36AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4C675C-3F8A-4697-9300-AB4FF36BD170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4C675C-3F8A-4697-9300-AB4FF36BD170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4C675C-3F8A-4697-9300-AB4FF36BD170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4C675C-3F8A-4697-9300-AB4FF36BD170}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +147,7 @@ Global
 		{8859D0C9-6223-4E80-8B63-3D19C23F4EE9} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
 		{C1803806-AF10-4D8E-9619-CD6B6FB43114} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
 		{7BE3EFF9-99C3-4E5E-A5A7-D674CAC36AA3} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
+		{EB4C675C-3F8A-4697-9300-AB4FF36BD170} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50199764-00F9-4953-B351-2C1FC91E3A58}
