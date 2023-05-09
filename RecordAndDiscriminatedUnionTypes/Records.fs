@@ -1,5 +1,6 @@
-﻿module RecordTypes =
-
+﻿module RecordTypes
+    open DiscriminatedUnions
+    
     /// Example of defining a record type
     type ContactCard =
         { Name     : string
@@ -52,3 +53,15 @@
 
     // Members are accessed via the '.' operator on an instantiated type.
     printfn $"Alf's alternate contact card is {contactAlternate.PrintedContactCard}"
+    printfn ""
+
+    // Records can also be represented as structs with [<Struct>] attribute
+    [<Struct>]
+    type ContactCardStruct =
+        { Name     : string
+          Phone    : string
+          Verified : bool }
+
+
+    /// DiscriminatedUnion stuff from the other .fs file
+    printAllCards()
