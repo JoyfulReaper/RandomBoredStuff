@@ -65,3 +65,6 @@
 
     /// DiscriminatedUnion stuff from the other .fs file
     printAllCards()
+
+    printfn $"Address: {address |> unwrapAddress}, Name: {name |> unwrapName}, and SSN: {ssn |> unwrapSSN}"
+    printfn $"Address: {unwrapAddress address}, Name: {unwrapName name}, and SSN: {unwrapSSN ssn}"

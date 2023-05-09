@@ -54,3 +54,26 @@
     let printAllCards() =
         for card in fullDeck do
             printfn $"{showPlayingCard card}"
+
+
+
+
+    // Single-case DUs are often used for domain modeling.  This can buy you extra type safety
+    // over primitive types such as strings and ints.
+    //
+    // Single-case DUs cannot be implicitly converted to or from the type they wrap.
+    // For example, a function which takes in an Address cannot accept a string as that input,
+    // or vice versa.
+    type Address = Address of string
+    type Name = Name of string
+    type SSN = SSN of int
+
+    // You can easily instantiate a single-case DU as follows.
+    let address = Address "111 Alf Way"
+    let name = Name "Alf"
+    let ssn = SSN 123456789
+    
+    /// When you need the value, you can unwrap the underlying value with a simple function.
+    let unwrapAddress (Address a) = a
+    let unwrapName (Name n) = n
+    let unwrapSSN (SSN s) = s
