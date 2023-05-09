@@ -1,4 +1,5 @@
-﻿module Arrays =
+﻿// Arrays are mutable in F#.
+module Arrays =
 
      /// This is The empty array.  Note that the syntax is similar to that of Lists, but uses `[| ... |]` instead.
     let array1 = [| |]
