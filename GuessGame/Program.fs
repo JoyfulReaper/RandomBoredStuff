@@ -71,9 +71,9 @@ let checkGuess target guess =
     | _ -> failwith "Invalid guess"
 
 let rec guessGame target guesses maxGuesses =
-    if guesses = maxGuesses then
-        printfn "You lose!"
-    else
+    match guesses with
+    | n when n = maxGuesses -> printfn "You lose!"
+    | _ ->
         printfn "Guess a number between 1 and 100"
         let guess = Console.ReadLine() |> int
         match checkGuess target guess with
