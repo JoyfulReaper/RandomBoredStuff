@@ -33,27 +33,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight", "Flyweight\Flyw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SinglyLinkedList", "SinglyLinkedList\SinglyLinkedList.csproj", "{B7A2EC0C-C495-4DF8-90F5-2B75C6EF2AA3}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Pipelines", "Pipelines\Pipelines.fsproj", "{F53EF5BB-0A05-4A3B-A80B-3362DC4BD6B3}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Pipelines", "Pipelines\Pipelines.fsproj", "{F53EF5BB-0A05-4A3B-A80B-3362DC4BD6B3}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ListsArraysAndSequences", "ListsArraysAndSequences\ListsArraysAndSequences.fsproj", "{89313D15-6CE8-4A4E-98BA-63A996063B0B}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ListsArraysAndSequences", "ListsArraysAndSequences\ListsArraysAndSequences.fsproj", "{89313D15-6CE8-4A4E-98BA-63A996063B0B}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Arrays", "Arrays\Arrays.fsproj", "{8859D0C9-6223-4E80-8B63-3D19C23F4EE9}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Arrays", "Arrays\Arrays.fsproj", "{8859D0C9-6223-4E80-8B63-3D19C23F4EE9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FSharp", "FSharp", "{65A0416F-3380-4470-BD7E-CD0760B32EFE}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sequences", "Sequences\Sequences.fsproj", "{C1803806-AF10-4D8E-9619-CD6B6FB43114}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Sequences", "Sequences\Sequences.fsproj", "{C1803806-AF10-4D8E-9619-CD6B6FB43114}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Recursion", "Recursion\Recursion.fsproj", "{7BE3EFF9-99C3-4E5E-A5A7-D674CAC36AA3}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Recursion", "Recursion\Recursion.fsproj", "{7BE3EFF9-99C3-4E5E-A5A7-D674CAC36AA3}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecordAndDiscriminatedUnionTypes", "RecordAndDiscriminatedUnionTypes\RecordAndDiscriminatedUnionTypes.fsproj", "{EB4C675C-3F8A-4697-9300-AB4FF36BD170}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecordAndDiscriminatedUnionTypes", "RecordAndDiscriminatedUnionTypes\RecordAndDiscriminatedUnionTypes.fsproj", "{EB4C675C-3F8A-4697-9300-AB4FF36BD170}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PatternMatching", "PatternMatching\PatternMatching.fsproj", "{9851B5B3-7D56-4C9B-A6D8-58602805440A}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "PatternMatching", "PatternMatching\PatternMatching.fsproj", "{9851B5B3-7D56-4C9B-A6D8-58602805440A}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Options", "Options\Options.fsproj", "{5E5C773F-7F05-4794-9FFA-D10BEC7B2FE8}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Options", "Options\Options.fsproj", "{5E5C773F-7F05-4794-9FFA-D10BEC7B2FE8}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "UnitsOfMeasure", "UnitsOfMeasure\UnitsOfMeasure.fsproj", "{FB738B39-21CC-434B-8193-5E4CA135B765}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "UnitsOfMeasure", "UnitsOfMeasure\UnitsOfMeasure.fsproj", "{FB738B39-21CC-434B-8193-5E4CA135B765}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ObjectProgramming", "ObjectProgramming\ObjectProgramming.fsproj", "{359158F7-6CF3-4C72-BE11-F23928F80713}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ObjectProgramming", "ObjectProgramming\ObjectProgramming.fsproj", "{359158F7-6CF3-4C72-BE11-F23928F80713}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GuessGame", "GuessGame\GuessGame.fsproj", "{BC38BB51-6B86-4794-B5A1-BF6ECC8328A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,6 +163,10 @@ Global
 		{359158F7-6CF3-4C72-BE11-F23928F80713}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{359158F7-6CF3-4C72-BE11-F23928F80713}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{359158F7-6CF3-4C72-BE11-F23928F80713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC38BB51-6B86-4794-B5A1-BF6ECC8328A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC38BB51-6B86-4794-B5A1-BF6ECC8328A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC38BB51-6B86-4794-B5A1-BF6ECC8328A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC38BB51-6B86-4794-B5A1-BF6ECC8328A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -176,6 +182,7 @@ Global
 		{5E5C773F-7F05-4794-9FFA-D10BEC7B2FE8} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
 		{FB738B39-21CC-434B-8193-5E4CA135B765} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
 		{359158F7-6CF3-4C72-BE11-F23928F80713} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
+		{BC38BB51-6B86-4794-B5A1-BF6ECC8328A6} = {65A0416F-3380-4470-BD7E-CD0760B32EFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50199764-00F9-4953-B351-2C1FC91E3A58}
