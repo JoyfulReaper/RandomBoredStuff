@@ -49,3 +49,22 @@
 
     tracker.History
     |> List.iter (fun state -> printfn "State: %A" state)
+
+
+    ///////////// Implementing an Interface /////////////
+
+    /// This is a type that implements the IDisposable interface.
+    type ReadFile() =
+        let file = new System.IO.StreamReader("readme.txt")
+        member this.ReadLine() = file.ReadLine()
+        // This is the implementation of IDisposiable members
+        interface System.IDisposable with
+            member this.Dispose() = file.Close()
+
+    /// This is an object that implements IDisposable via an Object Expression.
+    /// A new type definition is not required to implement an interface.
+    let interfaceImplementation = 
+        { new System.IDisposable with 
+            member this.Dispose() = printfn "Disposed!"  }
+
+    interfaceImplementation.Dispose()
