@@ -50,7 +50,7 @@ guessGame guesses
 *)
 
 ////// Guess the number game more functional //////
-
+(*
 open System
 
 let pickTarget() =
@@ -85,3 +85,52 @@ let playGuessGame() =
     guessGame target 0 10
 
 playGuessGame()
+*)
+
+///// Improved Functional Guess the number game /////
+open System
+
+module GuessTheNumber =
+
+    let pickTarget() =
+        Random().Next(1, 101)
+
+    type GuessResult =
+        | TooHigh
+        | TooLow
+        | Win
+
+    let checkGuess guess target =
+        match compare target guess with
+        | 0 -> GuessResult.Win
+        | -1 -> GuessResult.TooLow
+        | 1 -> GuessResult.TooHigh
+        | _ -> failwith "Invalid guess"
+
+    let printResult result numGuesses =
+        match result with
+        | GuessResult.Win -> printfn "You guessed correctly in %d tries!" (numGuesses + 1)
+        | GuessResult.TooHigh -> printfn "Too high!"
+        | GuessResult.TooLow -> printfn "Too low!"
+            
+    let isGameover numGuesses maxGuesses =
+        numGuesses = maxGuesses
+        
+
+    let playGuessGame maxGuesses =
+        let target = pickTarget()
+        let rec gameLoop numGuesses = 
+            if isGameover numGuesses maxGuesses then
+                printfn "You lose!"
+            else
+            printfn "Guess a number between 1 and 100"
+            let guess = Console.ReadLine() |> int
+            let result = checkGuess target guess
+            printResult result numGuesses
+            match result with
+            | GuessResult.Win -> ()
+            | _ -> gameLoop (numGuesses + 1)
+
+        gameLoop 0
+
+    playGuessGame 10
