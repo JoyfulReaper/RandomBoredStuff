@@ -92,7 +92,7 @@ open System
 
 module GuessTheNumber =
 
-    let pickTarget() =
+    let pickTargetNumber() =
         Random().Next(1, 101)
 
     type GuessResult =
@@ -101,36 +101,38 @@ module GuessTheNumber =
         | Win
 
     let checkGuess guess target =
-        match compare target guess with
+        match compare guess target with
         | 0 -> GuessResult.Win
         | -1 -> GuessResult.TooLow
         | 1 -> GuessResult.TooHigh
         | _ -> failwith "Invalid guess"
 
-    let printResult result numGuesses =
-        match result with
+    let printResult guessResult numGuesses =
+        match guessResult with
         | GuessResult.Win -> printfn "You guessed correctly in %d tries!" (numGuesses + 1)
         | GuessResult.TooHigh -> printfn "Too high!"
         | GuessResult.TooLow -> printfn "Too low!"
             
-    let isGameover numGuesses maxGuesses =
-        numGuesses = maxGuesses
-        
-
-    let playGuessGame maxGuesses =
-        let target = pickTarget()
-        let rec gameLoop numGuesses = 
-            if isGameover numGuesses maxGuesses then
-                printfn "You lose!"
+    let rec gameLoop target maxGuesses numGuesses = 
+            if numGuesses = maxGuesses then
+                printfn "You lose! The number I was thinking of was %i" target
             else
-            printfn "Guess a number between 1 and 100"
-            let guess = Console.ReadLine() |> int
-            let result = checkGuess target guess
-            printResult result numGuesses
-            match result with
-            | GuessResult.Win -> ()
-            | _ -> gameLoop (numGuesses + 1)
+                printfn "Guess a number between 1 and 100"
+                Console.ReadLine() 
+                |> int
+                |> (fun guess -> 
+                    let result = checkGuess guess target
+                    result)
+                |> (fun (result) -> 
+                    printResult result numGuesses
+                    match result with
+                    | GuessResult.Win -> ()
+                    | _ -> gameLoop target maxGuesses (numGuesses + 1))
 
-        gameLoop 0
+        
+        
+    let playGuessGame maxGuesses =
+        let target = pickTargetNumber()
+        gameLoop target maxGuesses 0
 
     playGuessGame 10
